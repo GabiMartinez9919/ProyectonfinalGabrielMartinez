@@ -1,0 +1,4 @@
+# ProyectoFinalMartinez — Simulador Ecommerce de Tecnología
+Portal 100% funcional en HTML/CSS/JS con catálogo, filtros, carrito (localStorage) y checkout (validaciones + SweetAlert2).
+- Ejecutar: abrir `index.html` con Live Server (puerto 5500) o `python -m http.server 8000`.
+- Estructura: `index.html`, `styles.css`, `app.js`, `data/`, `assets/`.
