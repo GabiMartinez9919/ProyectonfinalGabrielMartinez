@@ -1,0 +1,85 @@
+{
+  "products": [
+    {
+      "id": "p001",
+      "name": "Gabinete Redragon",
+      "price": 91024,
+      "category": "Componentes",
+      "stock": 20,
+      "image": "assets/img/product-1-gabinete-redragon.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p002",
+      "name": "Joystick Ps5 Sony",
+      "price": 459999,
+      "category": "Periféricos",
+      "stock": 20,
+      "image": "assets/img/product-2-joystick-ps5-sony.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p003",
+      "name": "Mouse Inalámbrico Logitech",
+      "price": 225523,
+      "category": "Periféricos",
+      "stock": 20,
+      "image": "assets/img/product-3-mouse-logitech-inalambrico.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p004",
+      "name": "Sony Playstation 5",
+      "price": 1109999,
+      "category": "Consolas",
+      "stock": 20,
+      "image": "assets/img/product-4-ps5.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p005",
+      "name": "Placa De Video Geforce RTX 4060",
+      "price": 799862,
+      "category": "Componentes",
+      "stock": 20,
+      "image": "assets/img/product-5-placa-de-video-geforce-rtx-4060.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p006",
+      "name": "Silla Corsair",
+      "price": 766399,
+      "category": "Mobiliario",
+      "stock": 20,
+      "image": "assets/img/product-6-silla-corsair-ts200.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p007",
+      "name": "Teclado Razer",
+      "price": 134812,
+      "category": "Periféricos",
+      "stock": 20,
+      "image": "assets/img/product-7-teclado-razer-inalambrico.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p008",
+      "name": "Auriculares gamer inalámbricos Logitech",
+      "price": 277059,
+      "category": "Audio",
+      "stock": 20,
+      "image": "assets/img/product-8-auriculares.jpeg",
+      "rating": 4.5
+    },
+    {
+      "id": "p009",
+      "name": "Escritorio Gamer",
+      "price": 257600,
+      "category": "Mobiliario",
+      "stock": 20,
+      "image": "assets/img/product-9-mesa-gamer.jpeg",
+      "rating": 4.5
+    }
+  ]
+}

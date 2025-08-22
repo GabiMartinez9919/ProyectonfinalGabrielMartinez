@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Proyecto Final - Simulador Ecommerce</title>
+  <meta name="description" content="Simulador de Ecommerce 100% funcional (JS + JSON + DOM + Eventos + localStorage)">
+  <link rel="stylesheet" href="styles.css">
+  <!-- SweetAlert2 (librería externa para reemplazar alert/prompt/confirm) -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
+</head>
+<body>
+  <header>
+    <div class="bar container">
+      <div class="brand">
+        <span class="dot"></span> <span>NeoShop · Simulador</span>
+      </div>
+      <div class="theme-switch" id="theme-switcher" aria-label="Cambiar tema" title="Cambiar tema">
+        <span class="dot"></span>
+        <span class="theme-dot" data-name="neon" aria-label="Tema Neon"></span>
+        <span class="theme-dot" data-name="minimal" aria-label="Tema Minimal"></span>
+        <span class="theme-dot" data-name="purple" aria-label="Tema Purple"></span>
+      </div>
+      <button id="cart-toggle" aria-expanded="false" aria-controls="cart-panel">🛒 Carrito <span class="count" id="cart-count">0</span></button>
+    </div>
+    <div class="container" style="padding-top:0;padding-bottom:16px;">
+      <div class="controls">
+        <input id="search" type="search" placeholder="Buscar producto (ej. teclado, taza)" autocomplete="off">
+        <select id="category">
+          <option value="all">Todas las categorías</option>
+        </select>
+        <select id="sort">
+          <option value="relevance">Ordenar: Relevancia</option>
+          <option value="price-asc">Precio: menor a mayor</option>
+          <option value="price-desc">Precio: mayor a menor</option>
+          <option value="name-asc">Nombre A→Z</option>
+          <option value="name-desc">Nombre Z→A</option>
+        </select>
+        <button id="reset" class="btn">Limpiar filtros</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="catalog">
+      <div id="products" class="grid" aria-live="polite" aria-busy="true"></div>
+    </section>
+  </main>
+
+  <!-- Cart Panel -->
+  <aside id="cart-panel" class="cart-panel" aria-hidden="true">
+    <div class="cart-head">
+      <strong>Tu carrito</strong>
+      <button id="close-cart" class="btn">Cerrar</button>
+    </div>
+    <div id="cart-list" class="cart-list"></div>
+    <div class="cart-foot">
+      <div class="total-line">
+        <span>Total</span>
+        <span id="cart-total">$ 0</span>
+      </div>
+      <div class="cart-actions">
+        <button id="empty-cart" class="btn danger">Vaciar</button>
+        <button id="checkout" class="btn primary">Finalizar compra</button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Checkout Modal -->
+  <div id="checkout-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="checkout-title">
+    <div class="paper">
+      <h3 id="checkout-title">Finalizar compra</h3>
+      <form id="checkout-form">
+        <div class="form-grid">
+          <div>
+            <label for="name">Nombre y apellido</label><br>
+            <input id="name" name="name" required value="Juan Pérez">
+          </div>
+          <div>
+            <label for="email">Email</label><br>
+            <input id="email" name="email" type="email" required value="juan.perez@example.com">
+          </div>
+          <div class="full">
+            <label for="address">Dirección</label><br>
+            <input id="address" name="address" required value="Av. Siempre Viva 742">
+          </div>
+          <div>
+            <label for="payment">Medio de pago</label><br>
+            <select id="payment" name="payment" required>
+              <option value="tarjeta">Tarjeta de crédito</option>
+              <option value="debito">Tarjeta de débito</option>
+              <option value="transferencia">Transferencia bancaria</option>
+              <option value="mercadopago">Mercado Pago</option>
+            </select>
+          </div>
+          <div>
+            <label for="delivery">Envío</label><br>
+            <select id="delivery" name="delivery" required>
+              <option value="a-domicilio">A domicilio</option>
+              <option value="retira-local">Retiro en local</option>
+            </select>
+          </div>
+          <div class="full">
+            <label><input type="checkbox" id="terms" required checked> Acepto términos y condiciones</label>
+            <div class="note">* Los datos se utilizan solo para simular el flujo de compra.</div>
+          </div>
+        </div>
+        <div class="form-actions">
+          <button type="button" id="cancel-checkout" class="btn">Cancelar</button>
+          <button type="submit" class="btn primary">Pagar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
